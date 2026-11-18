@@ -3,13 +3,32 @@ import NavbarButton from "@/shared/components/header/navbar-button";
 import { cn } from "@/shared/utils/cn";
 
 export interface Props extends React.ComponentProps<"nav"> {
+  isOpen: boolean;
   onClose: () => void;
 }
 
-export default function MobileMenu({ onClose, className, ...props }: Props) {
+export default function MobileMenu({
+  isOpen,
+  onClose,
+  className,
+  ...props
+}: Props) {
   return (
-    <nav className={cn("bg-neutral-0 flex flex-col", className)} {...props}>
-      <div className="flex flex-col gap-y-5 py-8">
+    <nav
+      inert={!isOpen}
+      className={cn(
+        "pointer-events-none flex flex-col",
+        isOpen && "pointer-events-auto",
+        className,
+      )}
+      {...props}
+    >
+      <div
+        className={cn(
+          "bg-neutral-0 flex flex-col gap-y-5 py-8 transition-opacity duration-500 ease-in-out",
+          isOpen ? "opacity-100" : "opacity-0",
+        )}
+      >
         <ul className="flex flex-col gap-y-5">
           <li className="text-center">
             <NavbarButton label="Stories" href="#" />
@@ -27,7 +46,10 @@ export default function MobileMenu({ onClose, className, ...props }: Props) {
         </Button>
       </div>
       <div
-        className="relative -left-6 w-screen flex-1 bg-neutral-950 opacity-50"
+        className={cn(
+          "relative -left-6 w-screen flex-1 bg-neutral-950 transition-opacity duration-500 ease-in-out",
+          isOpen ? "opacity-50" : "opacity-0",
+        )}
         aria-hidden="true"
         onClick={onClose}
       ></div>

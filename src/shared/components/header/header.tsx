@@ -41,14 +41,13 @@ export default function Header() {
       <Button variant="normal" tone="dark" className="hidden md:inline-flex">
         Get an invite
       </Button>
-      {isMobileMenuOpen && (
-        <MobileMenu
-          aria-label="Mobile navigation"
-          inert={!isMobileMenuOpen}
-          className="absolute top-full right-0 left-0 h-[calc(100vh-4.5rem)] px-6"
-          onClose={hideMobileMenu}
-        />
-      )}
+      {/* -4.5rem for the header fixed height */}
+      <MobileMenu
+        aria-label="Mobile navigation"
+        className="absolute top-full right-0 left-0 h-[calc(100dvh-4.5rem)] px-6"
+        isOpen={isMobileMenuOpen}
+        onClose={hideMobileMenu}
+      />
     </header>
   );
 }
