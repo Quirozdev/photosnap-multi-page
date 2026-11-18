@@ -30,7 +30,7 @@ export default function Header() {
   useRemoveVerticalScrolling({ shouldRemove: isMobileMenuOpen });
 
   return (
-    <header className="relative flex h-18 items-center justify-between px-6 md:px-10 xl:mx-auto xl:w-6xl xl:px-0">
+    <header className="bg-neutral-0 sticky top-0 z-50 flex h-18 items-center justify-between px-6 md:px-10 xl:mx-auto xl:w-6xl xl:px-0">
       <Logo />
       <MenuButton
         className="md:hidden"
