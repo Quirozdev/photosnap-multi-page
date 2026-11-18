@@ -1,7 +1,7 @@
 import Button from "@/shared/components/button/button";
 import HomeHeroImage from "@/features/home/components/hero/home-hero-image";
 
-export default function HomeHero() {
+export default function HomeHeroSection() {
   return (
     <section className="flex flex-col md:flex-row-reverse">
       <HomeHeroImage />
