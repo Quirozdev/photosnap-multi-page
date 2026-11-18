@@ -1,26 +1,126 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-dm-sans: var(--font-dm-sans);
+  --default-font-family: var(--font-dm-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@theme {
+  /* Colors */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-neutral-950: #000000;
+  --color-neutral-300: #dfdfdf;
+  --color-neutral-200: #efefef;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-0: #ffffff;
+
+  /* Gradients */
+
+  --background-image-gradient-1: linear-gradient(
+    180deg,
+    #00000000 0%,
+    #000000a6 100%
+  );
+
+  --background-image-gradient-2: linear-gradient(
+    225deg,
+    #63afdb 0%,
+    #6028f1 100%
+  );
+
+  --background-image-gradient-3: linear-gradient(
+    225deg,
+    #65ffeb 0%,
+    #27718a 100%
+  );
+  --background-image-gradient-4: linear-gradient(
+    45deg,
+    #d3205a 0%,
+    #ff5a5a 100%
+  );
+
+  --background-image-gradient-5: linear-gradient(
+    225deg,
+    #f6c683 0%,
+    #de3838 100%
+  );
+
+  --background-image-gradient-6: linear-gradient(
+    53deg,
+    #ffc593 0%,
+    #bc7198 50%,
+    #5a77ff 100%
+  );
+
+  --background-image-gradient-7: radial-gradient(
+    circle at bottom left,
+    #ffc593 0%,
+    #bc7198 50%,
+    #5a77ff 100%
+  );
+
+  /* Typography */
+
+  --text-preset-1: 2.5rem;
+  --text-preset-1--line-height: 120%;
+  --text-preset-1--letter-spacing: 4px;
+  --text-preset-1--font-weight: 700;
+
+  --text-preset-2: 2rem;
+  --text-preset-2--line-height: 125%;
+  --text-preset-2--letter-spacing: 3.5px;
+  --text-preset-2--font-weight: 700;
+
+  --text-preset-3: 1.5rem;
+  --text-preset-3--line-height: 105%;
+  --text-preset-3--letter-spacing: 0px;
+  --text-preset-3--font-weight: 700;
+
+  --text-preset-4: 1.125rem;
+  --text-preset-4--line-height: 140%;
+  --text-preset-4--letter-spacing: 0px;
+  --text-preset-4--font-weight: 700;
+
+  --text-preset-5: 0.9375rem;
+  --text-preset-5--line-height: 165%;
+  --text-preset-5--letter-spacing: 0px;
+  --text-preset-5--font-weight: 400;
+
+  --text-preset-5-bold: 0.9375rem;
+  --text-preset-5-bold--line-height: 135%;
+  --text-preset-5-bold--letter-spacing: 2.5px;
+  --text-preset-5-bold--font-weight: 700;
+
+  --text-preset-6: 0.8125rem;
+  --text-preset-6--line-height: 130%;
+  --text-preset-6--letter-spacing: 0px;
+  --text-preset-6--font-weight: 400;
+
+  --text-preset-7: 0.75rem;
+  --text-preset-7--line-height: 135%;
+  --text-preset-7--letter-spacing: 2px;
+  --text-preset-7--font-weight: 700;
+
+  /* Spacing */
+
+  --spacing-0: 0px;
+  --spacing-050: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-375: 30px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1400: 112px;
+
+  /* Radius */
+
+  --radius-0: 0px;
+  --radius-full: 999px;
 }
