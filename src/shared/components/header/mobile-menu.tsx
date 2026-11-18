@@ -25,7 +25,7 @@ export default function MobileMenu({
     >
       <div
         className={cn(
-          "bg-neutral-0 flex flex-col gap-y-5 py-8 transition-opacity duration-500 ease-in-out",
+          "bg-neutral-0 relative -left-6 flex w-screen flex-col gap-y-5 px-6 py-8 transition-opacity duration-500 ease-in-out",
           isOpen ? "opacity-100" : "opacity-0",
         )}
       >
