@@ -44,7 +44,7 @@ export default function Header() {
       {/* -4.5rem for the header fixed height */}
       <MobileMenu
         aria-label="Mobile navigation"
-        className="absolute top-full right-0 left-0 h-[calc(100dvh-4.5rem)] px-6"
+        className="absolute top-full right-0 left-0 h-[calc(100dvh-4.5rem)] px-6 md:hidden"
         isOpen={isMobileMenuOpen}
         onClose={hideMobileMenu}
       />
