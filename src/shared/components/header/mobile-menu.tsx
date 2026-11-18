@@ -1,3 +1,4 @@
+import { LINKS } from "@/core/config/navigation.config";
 import Button from "@/shared/components/button/button";
 import NavbarButton from "@/shared/components/header/navbar-button";
 import { cn } from "@/shared/utils/cn";
@@ -30,15 +31,13 @@ export default function MobileMenu({
         )}
       >
         <ul className="flex flex-col gap-y-5">
-          <li className="text-center">
-            <NavbarButton label="Stories" href="#" />
-          </li>
-          <li className="text-center">
-            <NavbarButton label="Features" href="#" />
-          </li>
-          <li className="text-center">
-            <NavbarButton label="Pricing" href="#" />
-          </li>
+          {LINKS.filter((link) => link.href !== "/").map((link) => {
+            return (
+              <li key={link.href} className="text-center">
+                <NavbarButton label={link.label} href={link.href} />
+              </li>
+            );
+          })}
         </ul>
         <div className="h-px bg-neutral-950 opacity-25"></div>
         <Button variant="normal" tone="dark">
