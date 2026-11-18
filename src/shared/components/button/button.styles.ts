@@ -13,7 +13,7 @@ export const buttonStyles = cva("cursor-pointer", {
     },
   },
   defaultVariants: {
-    variant: "arrow",
+    variant: "normal",
     tone: "light",
   },
 });

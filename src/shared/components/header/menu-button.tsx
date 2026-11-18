@@ -1,23 +1,37 @@
 import { cn } from "@/shared/utils/cn";
 import Image from "next/image";
 
-type Props = React.ComponentProps<"button">;
+interface Props extends React.ComponentProps<"button"> {
+  isOpen: boolean;
+  onToggle: () => void;
+}
 
-export default function MenuButton({ className, ...props }: Props) {
+export default function MenuButton({ isOpen, onToggle, className }: Props) {
   return (
     <button
+      type="button"
+      aria-label={isOpen ? "Open mobile menu" : "Close mobile menu"}
       className={cn(
-        "flex cursor-pointer items-center justify-center",
+        "flex size-5 cursor-pointer items-center justify-center",
         className,
       )}
-      {...props}
+      onClick={onToggle}
     >
-      <Image
-        src="/images/shared/mobile/menu.svg"
-        width={20}
-        height={6}
-        alt=""
-      />
+      {isOpen ? (
+        <Image
+          src="/images/shared/mobile/close.svg"
+          width={16}
+          height={15}
+          alt=""
+        />
+      ) : (
+        <Image
+          src="/images/shared/mobile/menu.svg"
+          width={20}
+          height={6}
+          alt=""
+        />
+      )}
     </button>
   );
 }
