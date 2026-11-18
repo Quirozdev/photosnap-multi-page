@@ -1,4 +1,5 @@
 import { buttonStyles } from "@/shared/components/button/button.styles";
+import RightArrowIcon from "@/shared/icons/right-arrow-icon";
 import { cn } from "@/shared/utils/cn";
 import { type VariantProps } from "class-variance-authority";
 
@@ -20,6 +21,7 @@ export default function Button({
       {...props}
     >
       {children}
+      {variant === "arrow" && <RightArrowIcon />}
     </button>
   );
 }
