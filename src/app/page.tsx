@@ -1,3 +1,4 @@
+import DesignedForEveryoneSection from "@/features/home/components/designed-for-everyone/designed-for-everyone-section";
 import HomeHeroSection from "@/features/home/components/hero/home-hero-section";
 import HomeStoriesSection from "@/features/home/components/stories/home-stories-section";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="flex flex-1 flex-col">
       <HomeHeroSection />
       <HomeStoriesSection />
+      <DesignedForEveryoneSection />
     </div>
   );
 }
