@@ -1,6 +1,6 @@
-import DesignedForEveryoneSection from "@/features/home/components/designed-for-everyone/designed-for-everyone-section";
-import HomeHeroSection from "@/features/home/components/hero/home-hero-section";
-import HomeStoriesSection from "@/features/home/components/stories/home-stories-section";
+import HomeHeroSection from "@/features/home/components/home-hero-section";
+import HomeStoriesSection from "@/features/home/components/home-stories-section";
+import DesignedForEveryoneSection from "@/features/home/components/designed-for-everyone-section";
 
 export default function Home() {
   return (
