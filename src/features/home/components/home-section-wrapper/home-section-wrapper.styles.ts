@@ -10,7 +10,7 @@ export const sectionStyles = cva("flex flex-col md:flex-row", {
 });
 
 export const contentStyles = cva(
-  "relative flex h-105 flex-col  items-center justify-center md:h-auto md:flex-1 md:items-stretch",
+  "relative flex min-h-105 flex-col items-center justify-center md:h-auto md:flex-1 md:items-stretch",
   {
     variants: {
       variant: {

@@ -36,7 +36,7 @@ export default function HomeStoriesImage() {
     <picture>
       <source media="(min-width: 80rem)" srcSet={desktop} />
       <source media="(min-width: 48rem)" srcSet={tablet} />
-      <img {...rest} alt={common.alt} className="w-full" />
+      <img {...rest} alt={common.alt} className="h-full w-full object-cover" />
     </picture>
   );
 }
