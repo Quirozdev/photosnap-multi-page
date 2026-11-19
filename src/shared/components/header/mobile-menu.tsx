@@ -1,6 +1,7 @@
 import { LINKS } from "@/core/config/navigation.config";
 import Button from "@/shared/components/button/button";
 import NavbarButton from "@/shared/components/header/navbar-button";
+import Separator from "@/shared/components/separator";
 import { cn } from "@/shared/utils/cn";
 
 export interface Props extends React.ComponentProps<"nav"> {
@@ -39,7 +40,7 @@ export default function MobileMenu({
             );
           })}
         </ul>
-        <div className="h-px bg-neutral-950 opacity-25"></div>
+        <Separator />
         <Button variant="normal" tone="dark">
           Get an invite
         </Button>
