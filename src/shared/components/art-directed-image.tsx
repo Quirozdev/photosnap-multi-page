@@ -1,6 +1,6 @@
 import { getImageProps } from "next/image";
 
-interface Props {
+export interface ArtDirectedImageProps {
   alt: string;
   mobile: {
     src: string;
@@ -24,7 +24,7 @@ export default function ArtDirectedImage({
   mobile,
   tablet,
   desktop,
-}: Props) {
+}: ArtDirectedImageProps) {
   const common = { alt };
 
   const {
