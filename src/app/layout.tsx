@@ -9,8 +9,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "%s | Photosnap",
-  description: "Photosnap",
+  title: {
+    template: "%s | Photosnap",
+    default: "Photosnap",
+  },
+  description: "Marketing site for 'Photosnap' a photo-sharing app",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
