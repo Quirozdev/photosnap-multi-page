@@ -1,9 +1,9 @@
-import HomeSectionWrapper from "@/features/home/components/home-section-wrapper/home-section-wrapper";
+import SectionWrapper from "@/shared/components/section-wrapper/section-wrapper";
 import ArtDirectedImage from "@/shared/components/art-directed-image";
 
 export default function HomeStoriesSection() {
   return (
-    <HomeSectionWrapper
+    <SectionWrapper
       variant="section"
       image={
         <ArtDirectedImage
