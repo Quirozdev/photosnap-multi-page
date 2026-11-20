@@ -1,6 +1,7 @@
+import { cn } from "@/shared/utils/cn";
 import { getImageProps } from "next/image";
 
-export interface ArtDirectedImageProps {
+export interface ArtDirectedImageProps extends React.ComponentProps<"img"> {
   alt: string;
   mobile: {
     src: string;
@@ -24,6 +25,7 @@ export default function ArtDirectedImage({
   mobile,
   tablet,
   desktop,
+  className,
 }: ArtDirectedImageProps) {
   const common = { alt };
 
@@ -58,7 +60,11 @@ export default function ArtDirectedImage({
     <picture>
       <source media="(min-width: 80rem)" srcSet={desktopSrcSet} />
       <source media="(min-width: 48rem)" srcSet={tabletSrcSet} />
-      <img {...rest} alt={common.alt} className="h-full w-full object-cover" />
+      <img
+        {...rest}
+        alt={common.alt}
+        className={cn("h-full w-full object-cover", className)}
+      />
     </picture>
   );
 }

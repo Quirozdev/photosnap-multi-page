@@ -4,6 +4,7 @@ import DesignedForEveryoneSection from "@/features/home/components/designed-for-
 import StoriesGrid from "@/features/stories/components/stories-grid";
 import FeaturesSection from "@/features/product-features/components/features-section";
 import { stories } from "@/features/stories/data/stories";
+import { features } from "@/features/product-features/data/features";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <HomeStoriesSection />
       <DesignedForEveryoneSection />
       <StoriesGrid stories={stories.slice(0, 4)} />
-      <FeaturesSection />
+      <FeaturesSection features={features.slice(0, 3)} />
     </div>
   );
 }

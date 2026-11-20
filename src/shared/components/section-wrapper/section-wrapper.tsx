@@ -3,7 +3,7 @@ import {
   descriptionStyles,
   sectionStyles,
   titleStyles,
-} from "@/features/home/components/home-section-wrapper/home-section-wrapper.styles";
+} from "@/shared/components/section-wrapper/section-wrapper.styles";
 import Button from "@/shared/components/button/button";
 import { cn } from "@/shared/utils/cn";
 import { VariantProps } from "class-variance-authority";
@@ -17,12 +17,12 @@ interface Props extends React.ComponentProps<"section"> {
   image: React.ReactNode;
   title: string;
   description: string;
-  button: {
+  button?: {
     label: string;
   };
 }
 
-export default function HomeSectionWrapper({
+export default function SectionWrapper({
   variant,
   image,
   title,
@@ -50,15 +50,17 @@ export default function HomeSectionWrapper({
             <Heading className={titleStyles({ variant })}>{title}</Heading>
             <p className={descriptionStyles({ variant })}>{description}</p>
           </div>
-          <div className="flex w-full max-w-79.5">
-            <Button
-              variant="arrow"
-              tone={variant === "hero" ? "dark" : "light"}
-              className="self-start"
-            >
-              {button.label}
-            </Button>
-          </div>
+          {button && (
+            <div className="flex w-full max-w-79.5">
+              <Button
+                variant="arrow"
+                tone={variant === "hero" ? "dark" : "light"}
+                className="self-start"
+              >
+                {button.label}
+              </Button>
+            </div>
+          )}
         </div>
       </article>
     </section>
