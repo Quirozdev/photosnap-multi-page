@@ -22,7 +22,7 @@ export default function StoriesHeroSection() {
           height: 650,
         }}
       />
-      <div className="relative top-1/2 flex -translate-y-1/2 flex-col gap-y-14 bg-neutral-950 px-7 py-12 md:absolute md:mx-10 md:max-w-96.75 md:gap-y-16 md:bg-transparent md:px-0 xl:mx-[112px]">
+      <div className="relative flex flex-col gap-y-14 bg-neutral-950 px-7 py-12 md:absolute md:top-1/2 md:mx-10 md:max-w-96.75 md:-translate-y-1/2 md:gap-y-16 md:bg-transparent md:px-0 xl:mx-[112px]">
         <div className="bg-gradient-6 absolute top-0 h-1.5 w-32 md:hidden"></div>
         <div className="flex flex-col gap-y-4 md:gap-y-6">
           <p className="text-preset-7 text-neutral-0">
