@@ -6,7 +6,7 @@ import Logo from "@/shared/components/logo";
 export default function Footer() {
   return (
     <footer className="bg-neutral-950 px-8 py-14 md:px-10 md:py-15">
-      <div className="flex max-w-6xl flex-col items-center gap-y-30 md:flex-row md:items-stretch md:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-y-30 md:flex-row md:items-stretch md:justify-between">
         <div className="flex flex-col gap-y-12 md:gap-y-18">
           <div className="flex flex-col items-center gap-y-8 md:items-start">
             <Logo className="text-neutral-0" />
