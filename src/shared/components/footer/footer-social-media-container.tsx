@@ -17,32 +17,27 @@ export default function FooterSocialMediaContainer({
       <SocialMediaLink
         href="https://facebook.com"
         label="Facebook"
-        icon={<FacebookIcon />}
-        hoverFill="url(#facebook-gradient)"
+        icon={FacebookIcon}
       />
       <SocialMediaLink
         href="https://youtube.com"
         label="Youtube"
-        icon={<YoutubeIcon />}
-        hoverFill="url(#youtube-gradient)"
+        icon={YoutubeIcon}
       />
       <SocialMediaLink
         href="https://x.com"
         label="Twitter (X)"
-        icon={<TwitterIcon />}
-        hoverFill="url(#twitter-gradient)"
+        icon={TwitterIcon}
       />
       <SocialMediaLink
         href="https://pinterest.com"
         label="Pinterest"
-        icon={<PinterestIcon />}
-        hoverFill="url(#pinterest-gradient)"
+        icon={PinterestIcon}
       />
       <SocialMediaLink
         href="https://instagram.com"
         label="Instagram"
-        icon={<InstagramIcon />}
-        hoverFill="url(#instagram-gradient)"
+        icon={InstagramIcon}
       />
     </div>
   );
