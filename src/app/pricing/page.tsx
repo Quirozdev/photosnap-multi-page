@@ -1,4 +1,4 @@
-import CompareFeaturesSection from "@/features/pricing/components/compare-features-section";
+import CompareFeaturesSection from "@/features/pricing/components/compare-features/compare-features-section";
 import PricingHeroSection from "@/features/pricing/components/pricing-hero-section";
 import PricingPlansSection from "@/features/pricing/components/pricing-plans-section";
 import BetaInvitationSection from "@/shared/components/beta-invitation-section";
