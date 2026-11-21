@@ -3,7 +3,7 @@ import { SVGProps } from "react";
 
 export default function Logo(props: SVGProps<SVGSVGElement>) {
   return (
-    <Link href="/">
+    <Link href="/" aria-label="Go to homepage">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="170"
