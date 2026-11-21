@@ -58,8 +58,18 @@ export default function ArtDirectedImage({
 
   return (
     <picture>
-      <source media="(min-width: 80rem)" srcSet={desktopSrcSet} />
-      <source media="(min-width: 48rem)" srcSet={tabletSrcSet} />
+      <source
+        media="(min-width: 80rem)"
+        srcSet={desktopSrcSet}
+        width={desktop.width}
+        height={desktop.height}
+      />
+      <source
+        media="(min-width: 48rem)"
+        srcSet={tabletSrcSet}
+        width={tablet.width}
+        height={tablet.height}
+      />
       <img
         {...rest}
         alt={common.alt}
