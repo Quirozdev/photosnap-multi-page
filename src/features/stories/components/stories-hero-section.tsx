@@ -7,6 +7,8 @@ export default function StoriesHeroSection() {
       <ArtDirectedImage
         loading="eager"
         fetchPriority="high"
+        pictureClassName="w-full aspect-375/317 md:aspect-768/650 xl:aspect-1440/650"
+        sizes="100vw"
         alt="Moon of appalachia at the top of some mountains"
         mobile={{
           src: "/images/stories/mobile/moon-of-appalacia.jpg",
@@ -35,7 +37,7 @@ export default function StoriesHeroSection() {
           </h1>
         </div>
         <div className="flex flex-col gap-y-6">
-          <p className="tex-preset-6 text-neutral-0 inline-flex gap-x-2">
+          <p className="text-preset-6 text-neutral-0 inline-flex gap-x-2">
             <span className="opacity-75">March 2nd 2020</span>
             <span>by John Appleseed</span>
           </p>

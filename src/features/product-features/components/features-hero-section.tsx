@@ -9,6 +9,8 @@ export default function FeaturesHeroSection() {
         <ArtDirectedImage
           loading="eager"
           fetchPriority="high"
+          sizes="(min-width: 80rem) 830px, (min-width: 48rem) 273px, 100vw"
+          pictureClassName="aspect-375/294 w-full md:aspect-273/490 md:w-[273px] md:flex-none xl:aspect-830/490 xl:w-[830px]"
           alt="Man holding a camera in a mountain"
           mobile={{
             width: 375,

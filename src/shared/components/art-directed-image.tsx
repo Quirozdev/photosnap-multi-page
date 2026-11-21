@@ -1,5 +1,6 @@
 import { cn } from "@/shared/utils/cn";
 import { getImageProps } from "next/image";
+import { HTMLAttributes } from "react";
 
 const TABLET_BREAKPOINT = "(min-width: 48rem)";
 const DESKTOP_BREAKPOINT = "(min-width: 80rem)";
@@ -22,6 +23,7 @@ export interface ArtDirectedImageProps extends React.ComponentProps<"img"> {
     width: number;
     height: number;
   };
+  pictureClassName?: HTMLAttributes<HTMLElement>["className"];
 }
 
 export default function ArtDirectedImage({
@@ -31,6 +33,7 @@ export default function ArtDirectedImage({
   tablet,
   desktop,
   className,
+  pictureClassName,
   ...props
 }: ArtDirectedImageProps) {
   const sizes =
@@ -67,7 +70,7 @@ export default function ArtDirectedImage({
   });
 
   return (
-    <picture>
+    <picture className={cn("block", pictureClassName)}>
       <source
         media={DESKTOP_BREAKPOINT}
         srcSet={desktopSrcSet}

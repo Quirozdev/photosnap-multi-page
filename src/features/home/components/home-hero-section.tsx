@@ -9,6 +9,8 @@ export default function HomeHeroSection() {
         <ArtDirectedImage
           loading="eager"
           fetchPriority="high"
+          sizes="(min-width: 80rem) 830px, (min-width: 48rem) 273px, 100vw"
+          pictureClassName="aspect-375/294 w-full md:aspect-273/650 md:w-[273px] md:flex-none xl:aspect-830/650 xl:w-[830px]"
           alt="Man watching the horizon in a precious river"
           mobile={{
             width: 375,
