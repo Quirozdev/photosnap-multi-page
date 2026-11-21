@@ -7,6 +7,8 @@ export default function PricingHeroSection() {
       variant="hero"
       image={
         <ArtDirectedImage
+          loading="eager"
+          fetchPriority="high"
           alt="A woman preparing a camera in a sunset"
           mobile={{
             width: 375,

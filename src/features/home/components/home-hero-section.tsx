@@ -7,6 +7,8 @@ export default function HomeHeroSection() {
       variant="hero"
       image={
         <ArtDirectedImage
+          loading="eager"
+          fetchPriority="high"
           alt="Man watching the horizon in a precious river"
           mobile={{
             width: 375,

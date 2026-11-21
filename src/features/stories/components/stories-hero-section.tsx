@@ -5,6 +5,8 @@ export default function StoriesHeroSection() {
   return (
     <section className="relative flex flex-col">
       <ArtDirectedImage
+        loading="eager"
+        fetchPriority="high"
         alt="Moon of appalachia at the top of some mountains"
         mobile={{
           src: "/images/stories/mobile/moon-of-appalacia.jpg",

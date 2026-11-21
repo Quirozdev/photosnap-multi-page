@@ -7,6 +7,8 @@ export default function FeaturesHeroSection() {
       variant="hero"
       image={
         <ArtDirectedImage
+          loading="eager"
+          fetchPriority="high"
           alt="Man holding a camera in a mountain"
           mobile={{
             width: 375,

@@ -26,6 +26,7 @@ export default function ArtDirectedImage({
   tablet,
   desktop,
   className,
+  ...props
 }: ArtDirectedImageProps) {
   const common = { alt };
 
@@ -74,6 +75,7 @@ export default function ArtDirectedImage({
         {...rest}
         alt={common.alt}
         className={cn("h-full w-full object-cover", className)}
+        {...props}
       />
     </picture>
   );
