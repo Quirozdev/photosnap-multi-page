@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/shared/components/header/header";
 import Footer from "@/shared/components/footer/footer";
+import { SITE_URL } from "@/core/config/site";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -13,7 +14,7 @@ const author = "Luis Daniel Quiroz Osuna";
 const siteName = "Photosnap";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL!),
+  metadataBase: new URL(SITE_URL),
   title: {
     template: "%s | Photosnap",
     default: "Photosnap",
