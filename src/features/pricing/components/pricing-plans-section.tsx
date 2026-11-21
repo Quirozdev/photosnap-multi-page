@@ -9,7 +9,7 @@ export default function PricingPlansSection() {
   const [isYearlySelected, setIsYearlySelected] = useState(false);
 
   return (
-    <section className="px-8 py-16 md:px-10 md:py-30">
+    <section className="px-8 md:px-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-y-10 xl:gap-y-12">
         <Toggle
           isActive={isYearlySelected}
