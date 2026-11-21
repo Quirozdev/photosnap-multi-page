@@ -8,6 +8,8 @@ export default function DesignedForEveryoneSection() {
       image={
         <ArtDirectedImage
           alt="A man preparing a camera"
+          sizes="(min-width: 80rem) 830px, (min-width: 48rem) 273px, 100vw"
+          pictureClassName="aspect-375/271 w-full md:aspect-273/600 md:w-[273px] md:flex-none xl:aspect-830/600 xl:w-[830px]"
           mobile={{
             width: 375,
             height: 271,
