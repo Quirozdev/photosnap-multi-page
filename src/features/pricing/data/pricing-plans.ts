@@ -2,6 +2,7 @@ import { PricingPlan } from "@/features/pricing/types/pricing-plan";
 
 export const pricingPlans: PricingPlan[] = [
   {
+    id: "basic",
     name: "Basic",
     description:
       "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
@@ -12,6 +13,7 @@ export const pricingPlans: PricingPlan[] = [
     isFeatured: false,
   },
   {
+    id: "pro",
     name: "Pro",
     description:
       "More advanced features available. Recommended for photography veterans and professionals.",
@@ -22,6 +24,7 @@ export const pricingPlans: PricingPlan[] = [
     isFeatured: true,
   },
   {
+    id: "business",
     name: "Business",
     description:
       "Additional features available such as more detailed metrics. Recommended for business owners.",

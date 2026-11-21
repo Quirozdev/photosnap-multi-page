@@ -21,7 +21,7 @@ export default function PricingPlansSection() {
           {pricingPlans.map((pricingPlan) => {
             return (
               <PricingPlanCard
-                key={pricingPlan.name}
+                key={pricingPlan.id}
                 {...pricingPlan}
                 priceDisplay={!isYearlySelected ? "monthly" : "yearly"}
               />

@@ -1,4 +1,6 @@
-import CheckIcon from "@/shared/icons/check-icon";
+import CompareFeaturesTableItem from "@/features/pricing/components/compare-features/compare-features-table-item";
+import { comparisonFeatures } from "@/features/pricing/data/comparison-features";
+import { pricingPlans } from "@/features/pricing/data/pricing-plans";
 
 export default function CompareFeaturesTable() {
   return (
@@ -15,143 +17,28 @@ export default function CompareFeaturesTable() {
           >
             <h4>The features</h4>
           </th>
-          <th
-            scope="col"
-            className="text-preset-7 p-6 pt-0 text-center text-neutral-950 uppercase"
-          >
-            Basic
-          </th>
-          <th
-            scope="col"
-            className="text-preset-7 p-6 pt-0 text-center text-neutral-950 uppercase"
-          >
-            Pro
-          </th>
-          <th
-            scope="col"
-            className="text-preset-7 p-6 pt-0 text-center text-neutral-950 uppercase"
-          >
-            Business
-          </th>
+          {pricingPlans.map((pricingPlan) => {
+            return (
+              <th
+                key={pricingPlan.id}
+                scope="col"
+                className="text-preset-7 p-6 pt-0 text-center text-neutral-950 uppercase"
+              >
+                {pricingPlan.name}
+              </th>
+            );
+          })}
         </tr>
       </thead>
       <tbody>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            UNLIMITED STORY POSTING
-          </th>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            UNLIMITED PHOTO UPLOAD
-          </th>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            EMBEDDING CUSTOM CONTENT
-          </th>
-          <td className="p-6"></td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            CUSTOMIZE METADATA
-          </th>
-          <td className="p-6"></td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            ADVANCED METRICS
-          </th>
-          <td className="p-6"></td>
-          <td className="p-6"></td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            PHOTO DOWNLOADS
-          </th>
-          <td className="p-6"></td>
-          <td className="p-6"></td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            SEARCH ENGINE INDEXING
-          </th>
-          <td className="p-6"></td>
-          <td className="p-6"></td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
-        <tr className="border-b border-neutral-300">
-          <th
-            scope="row"
-            className="text-preset-7 p-6 text-left text-neutral-950"
-          >
-            CUSTOM ANALYTICS
-          </th>
-          <td className="p-6"></td>
-          <td className="p-6"></td>
-          <td className="p-6">
-            <CheckIcon className="mx-auto block" />
-          </td>
-        </tr>
+        {comparisonFeatures.map((comparisonFeature) => {
+          return (
+            <CompareFeaturesTableItem
+              key={comparisonFeature.id}
+              {...comparisonFeature}
+            />
+          );
+        })}
       </tbody>
     </table>
   );

@@ -1,4 +1,5 @@
 export interface PricingPlan {
+  id: string;
   name: string;
   description: string;
   pricing: {
