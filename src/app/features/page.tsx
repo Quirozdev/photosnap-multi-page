@@ -6,6 +6,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Features",
+  description:
+    "Discover the features and tools available for creating and sharing photo stories.",
+  alternates: {
+    canonical: "/features",
+  },
 };
 
 export default function Page() {

@@ -5,6 +5,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Stories",
+  description:
+    "Explore inspiring photography stories from Photosnap and discover the visual stories shared by photographers.",
+  alternates: {
+    canonical: "/stories",
+  },
 };
 
 export default function Page() {

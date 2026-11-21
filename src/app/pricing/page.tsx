@@ -6,6 +6,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pricing",
+  description:
+    "Compare Photosnap's Basic, Pro, and Business plans and find the right option for your needs.",
+  alternates: {
+    canonical: "/pricing",
+  },
 };
 
 export default function Page() {

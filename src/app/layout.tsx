@@ -9,12 +9,48 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
+const author = "Luis Daniel Quiroz Osuna";
+const siteName = "Photosnap";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL!),
   title: {
     template: "%s | Photosnap",
     default: "Photosnap",
   },
-  description: "Marketing site for 'Photosnap' a photo-sharing app",
+  description:
+    "A responsive, multi-page photography website concept featuring visual stories, product features, and pricing plans.",
+  applicationName: siteName,
+  authors: [
+    {
+      name: author,
+      url: "https://github.com/Quirozdev",
+    },
+  ],
+  creator: author,
+  openGraph: {
+    type: "website",
+    siteName: siteName,
+    title: "Photosnap",
+    description:
+      "Explore Photosnap, a multi-page photography website featuring stories, product features, and pricing plans.",
+    url: "/",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 900,
+        height: 660,
+        alt: "Preview of the Photosnap photography website homepage.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photosnap",
+    description:
+      "Explore Photosnap, a multi-page photography website featuring stories, product features, and pricing plans.",
+    images: ["/opengraph-image.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

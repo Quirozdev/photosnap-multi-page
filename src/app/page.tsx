@@ -5,6 +5,15 @@ import StoriesGrid from "@/features/stories/components/stories-grid";
 import FeaturesSection from "@/features/product-features/components/features-section";
 import { stories } from "@/features/stories/data/stories";
 import { features } from "@/features/product-features/data/features";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  description:
+    "A responsive photography website for discovering and sharing visual stories.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (
