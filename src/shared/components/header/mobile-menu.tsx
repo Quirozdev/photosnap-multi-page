@@ -35,7 +35,11 @@ export default function MobileMenu({
           {LINKS.filter((link) => link.href !== "/").map((link) => {
             return (
               <li key={link.href} className="text-center">
-                <NavbarButton label={link.label} href={link.href} />
+                <NavbarButton
+                  label={link.label}
+                  href={link.href}
+                  onNavigate={onClose}
+                />
               </li>
             );
           })}

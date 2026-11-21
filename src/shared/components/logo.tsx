@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { SVGProps } from "react";
 
-export default function Logo(props: SVGProps<SVGSVGElement>) {
+interface Props extends SVGProps<SVGSVGElement> {
+  onNavigate?: () => void;
+}
+
+export default function Logo({ onNavigate, ...props }: Props) {
   return (
-    <Link href="/" aria-label="Go to homepage">
+    <Link href="/" aria-label="Go to homepage" onNavigate={onNavigate}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="170"

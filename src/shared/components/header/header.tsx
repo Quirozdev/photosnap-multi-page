@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header className="bg-neutral-0 sticky top-0 z-50 flex h-18 items-center justify-between px-6 md:px-10 xl:justify-center xl:px-0">
       <div className="flex w-full items-center justify-between xl:w-6xl">
-        <Logo />
+        <Logo onNavigate={hideMobileMenu} />
         <MenuButton
           className="md:hidden"
           isOpen={isMobileMenuOpen}
