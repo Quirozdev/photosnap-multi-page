@@ -16,7 +16,7 @@ export default function StoryCard({
 }: Props) {
   return (
     <div className="group relative cursor-pointer transition-transform duration-500 ease-in-out hover:-translate-y-6 md:max-h-125">
-      <ArtDirectedImage {...image} />
+      <ArtDirectedImage {...image} className="md:max-h-125" />
       <div className="absolute right-10 bottom-10 left-10 z-10 flex flex-col gap-y-5">
         <div className="flex flex-col gap-y-4">
           <div className="flex flex-col gap-y-1">
