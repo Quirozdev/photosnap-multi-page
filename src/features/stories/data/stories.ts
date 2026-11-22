@@ -3,6 +3,7 @@ import { Story } from "@/features/stories/types/story";
 // there are no tablet specific images, so desktop ones are used for it
 export const stories: Story[] = [
   {
+    id: "the-mountains",
     image: {
       alt: "Clouded mountains",
       mobile: {
@@ -26,6 +27,7 @@ export const stories: Story[] = [
     author: "John Appleseed",
   },
   {
+    id: "sunset-cityscapes",
     image: {
       alt: "Tall buildings in beautiful sunset",
       mobile: {
@@ -49,6 +51,7 @@ export const stories: Story[] = [
     author: "Benjamin Cruz",
   },
   {
+    id: "18-days-voyage",
     image: {
       alt: "Man walking on a desert with a backpack",
       mobile: {
@@ -72,6 +75,7 @@ export const stories: Story[] = [
     author: "Alexei Borodin",
   },
   {
+    id: "architecturals",
     image: {
       alt: "Nice architectured building",
       mobile: {
@@ -95,6 +99,7 @@ export const stories: Story[] = [
     author: "Samantha Brooke",
   },
   {
+    id: "world-tour-2019",
     image: {
       alt: "Mountains and a beautiful river",
       mobile: {
@@ -118,6 +123,7 @@ export const stories: Story[] = [
     author: "Timothy Wagner",
   },
   {
+    id: "unforeseen-corners",
     image: {
       alt: "Tree with a beautiful sunset behind aswell as the sea",
       mobile: {
@@ -141,6 +147,7 @@ export const stories: Story[] = [
     author: "William Malcolm",
   },
   {
+    id: "king-of-africa-part-2",
     image: {
       alt: "A lion looking at something",
       mobile: {
@@ -164,6 +171,7 @@ export const stories: Story[] = [
     author: "Tim Hillenburg",
   },
   {
+    id: "trip-to-nowhere",
     image: {
       alt: "A tree behind a river in the night",
       mobile: {
@@ -187,6 +195,7 @@ export const stories: Story[] = [
     author: "Felicia Rourke",
   },
   {
+    id: "rage-of-the-sea",
     image: {
       alt: "The sea in a sunset",
       mobile: {
@@ -210,6 +219,7 @@ export const stories: Story[] = [
     author: "Mohammed Abdul",
   },
   {
+    id: "running-free",
     image: {
       alt: "Horses running",
       mobile: {
@@ -233,6 +243,7 @@ export const stories: Story[] = [
     author: "Michelle",
   },
   {
+    id: "behind-the-waves",
     image: {
       alt: "Waves in the sea",
       mobile: {
@@ -256,6 +267,7 @@ export const stories: Story[] = [
     author: "Lamarr Wilson",
   },
   {
+    id: "calm-waters",
     image: {
       alt: "Mountains in a sunset behind the sea",
       mobile: {
@@ -279,6 +291,7 @@ export const stories: Story[] = [
     author: "Samantha Brooke",
   },
   {
+    id: "the-milky-way",
     image: {
       alt: "The milky way in space",
       mobile: {
@@ -302,6 +315,7 @@ export const stories: Story[] = [
     author: "Benjamin Cruz",
   },
   {
+    id: "night-at-the-dark-forest",
     image: {
       alt: "Snowy mountains in a forest in the night",
       mobile: {
@@ -325,6 +339,7 @@ export const stories: Story[] = [
     author: "Mohammed Abdul",
   },
   {
+    id: "somwarpets-beauty",
     image: {
       alt: "Multiple orange flowers",
       mobile: {
@@ -348,6 +363,7 @@ export const stories: Story[] = [
     author: "Michelle",
   },
   {
+    id: "land-of-dreams",
     image: {
       alt: "A church with snowy mountains in the background in the night",
       mobile: {
