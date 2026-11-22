@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Mentor - Photosnap Multi-page Website
+
+A responsive, multi-page photography website built as a solution to the [Photosnap Multi-page Website challenge](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW) on Frontend Mentor.
+
+**[Live Demo](https://photosnap-multi-page-quiroz.vercel.app/)** · **[Source Code](https://github.com/Quirozdev/photosnap-multi-page)**
+
+![Project preview](./docs/screenshots/preview.webp)
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Overview](#overview)
+  - [Pages](#pages)
+  - [Responsive Design &amp; Accessibility](#responsive-design--accessibility)
+- [Demo](#demo)
+  - [Desktop](#desktop)
+  - [Tablet](#tablet)
+  - [Mobile](#mobile)
+- [Built With](#built-with)
+- [Author](#author)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (20.9 or later)
+- [pnpm](https://pnpm.io/) (12.16.1)
+
+### Installation
+
+**1. Clone the repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Quirozdev/photosnap-multi-page.git
+cd photosnap-multi-page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Install dependencies**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**3. Configure environment variables**
 
-## Learn More
+Create a `.env.local` file in the project root and configure the required environment variable:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+SITE_URL=http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**4. Start the development server**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm dev
+```
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**5. Run a production build (optional)**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm build
+pnpm start
+```
+
+**6. Run ESLint**
+
+```bash
+pnpm lint
+```
+
+## Overview
+
+Photosnap is a photography website concept for photographers and visual storytellers to discover, create, and share visual stories. It features four pages covering the platform's stories, features, and pricing plans.
+
+### Pages
+
+**Home**
+
+- Discover the platform through a prominent hero section.
+- Explore featured stories and product features.
+- Navigate to the Stories and Features pages.
+
+**Stories**
+
+- Browse a collection of photography stories.
+- Discover the featured story.
+- Explore story cards with their images, publication dates, and authors.
+
+**Features**
+
+- Explore the platform's features and capabilities.
+- Browse feature descriptions and illustrations.
+- Discover how Photosnap supports photographers and visual storytellers.
+
+**Pricing**
+
+- Compare the Basic, Pro, and Business subscription plans.
+- Switch between monthly and yearly billing options.
+- Compare plan features using a responsive comparison table.
+
+### Responsive Design & Accessibility
+
+- Responsive layouts optimized for desktop, tablet, and mobile devices.
+- Art-directed images with different assets for mobile, tablet, and desktop.
+- Responsive navigation with keyboard support, including Escape to close the mobile menu.
+- Hover and focus states for interactive elements.
+- Accessible labels, semantic HTML, and appropriate ARIA attributes.
+
+## Demo
+
+### Desktop
+
+![Desktop demo](./docs/demo/demo-desktop.gif)
+
+### Tablet
+
+![Tablet demo](./docs/demo/demo-tablet.gif)
+
+### Mobile
+
+![Mobile demo](./docs/demo/demo-mobile.gif)
+
+## Built With
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Class Variance Authority](https://cva.style/docs)
+- [clsx](https://github.com/lukeed/clsx)
+- [tailwind-merge](https://github.com/dcastil/tailwind-merge)
+- [pnpm](https://pnpm.io/)
+
+**Development Practices**
+
+- Feature-based project organization.
+- Next.js App Router and Server/Client Components.
+- Reusable shared components and CVA-based component variants.
+- Responsive image optimization and art direction using `getImageProps`.
+- Mobile-first development workflow.
+- SEO metadata, Open Graph, robots.txt, and sitemap.xml.
+
+## Author
+
+- GitHub - [@Quirozdev](https://github.com/Quirozdev)
