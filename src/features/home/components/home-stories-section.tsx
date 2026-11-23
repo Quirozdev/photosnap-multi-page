@@ -29,7 +29,7 @@ export default function HomeStoriesSection() {
       }
       title="BEAUTIFUL STORIES EVERY TIME"
       description="We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone."
-      button={{ label: "View the stories" }}
+      button={{ label: "View the stories", href: "/stories" }}
     />
   );
 }

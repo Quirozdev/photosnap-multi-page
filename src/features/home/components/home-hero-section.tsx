@@ -31,7 +31,7 @@ export default function HomeHeroSection() {
       }
       title="CREATE AND SHARE YOUR PHOTO STORIES."
       description="Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others."
-      button={{ label: "Get an invite" }}
+      button={{ label: "Get an invite", href: "#" }}
       className="md:flex-row-reverse"
     />
   );

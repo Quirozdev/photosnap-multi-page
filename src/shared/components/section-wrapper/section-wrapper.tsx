@@ -7,6 +7,9 @@ import {
 import Button from "@/shared/components/button/button";
 import { cn } from "@/shared/utils/cn";
 import { VariantProps } from "class-variance-authority";
+import Link from "next/link";
+import { buttonStyles } from "@/shared/components/button/button.styles";
+import RightArrowIcon from "@/shared/icons/right-arrow-icon";
 
 type SectionVariant = NonNullable<
   VariantProps<typeof sectionStyles>["variant"]
@@ -19,6 +22,7 @@ interface Props extends React.ComponentProps<"section"> {
   description: string;
   button?: {
     label: string;
+    href: string;
   };
 }
 
@@ -52,13 +56,19 @@ export default function SectionWrapper({
           </div>
           {button && (
             <div className="flex w-full max-w-79.5">
-              <Button
-                variant="arrow"
-                tone={variant === "hero" ? "dark" : "light"}
-                className="self-start"
+              <Link
+                href={button.href}
+                className={cn(
+                  "self-start",
+                  buttonStyles({
+                    variant: "arrow",
+                    tone: variant === "hero" ? "dark" : "light",
+                  }),
+                )}
               >
-                {button.label}
-              </Button>
+                <span>{button.label}</span>
+                <RightArrowIcon />
+              </Link>
             </div>
           )}
         </div>

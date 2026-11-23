@@ -15,11 +15,18 @@ export default function CompareFeaturesTableItem({
         {label}
       </th>
       <td className="p-6">
-        {basic && <CheckIcon className="mx-auto block" />}
+        {basic && <CheckIcon aria-hidden="true" className="mx-auto block" />}
+        <span className="sr-only">{basic ? "Included" : "Not included"}</span>
       </td>
-      <td className="p-6">{pro && <CheckIcon className="mx-auto block" />}</td>
+      <td className="p-6">
+        {pro && <CheckIcon className="mx-auto block" />}
+        <span className="sr-only">{pro ? "Included" : "Not included"}</span>
+      </td>
       <td className="p-6">
         {business && <CheckIcon className="mx-auto block" />}
+        <span className="sr-only">
+          {business ? "Included" : "Not included"}
+        </span>
       </td>
     </tr>
   );
