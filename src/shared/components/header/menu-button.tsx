@@ -10,7 +10,9 @@ export default function MenuButton({ isOpen, onToggle, className }: Props) {
   return (
     <button
       type="button"
-      aria-label={isOpen ? "Open mobile menu" : "Close mobile menu"}
+      aria-expanded={isOpen}
+      aria-controls="mobile-navigation"
+      aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
       className={cn(
         "flex size-5 cursor-pointer items-center justify-center",
         className,
