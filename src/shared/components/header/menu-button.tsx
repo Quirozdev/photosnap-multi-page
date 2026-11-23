@@ -6,7 +6,12 @@ interface Props extends React.ComponentProps<"button"> {
   onToggle: () => void;
 }
 
-export default function MenuButton({ isOpen, onToggle, className }: Props) {
+export default function MenuButton({
+  isOpen,
+  onToggle,
+  className,
+  ...props
+}: Props) {
   return (
     <button
       type="button"
@@ -18,6 +23,7 @@ export default function MenuButton({ isOpen, onToggle, className }: Props) {
         className,
       )}
       onClick={onToggle}
+      {...props}
     >
       {isOpen ? (
         <Image
