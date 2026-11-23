@@ -29,7 +29,7 @@ export default function DesignedForEveryoneSection() {
       }
       title="DESIGNED FOR EVERYONE"
       description="Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it.."
-      button={{ label: "View the stories" }}
+      button={{ label: "View the stories", href: "/stories" }}
       className="md:flex-row-reverse"
     />
   );

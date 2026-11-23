@@ -29,7 +29,7 @@ describe("StoryCard", () => {
     render(<StoryCard {...story} />);
 
     expect(
-      screen.getByRole("button", { name: /read story/i }),
+      screen.getByRole("link", { name: /read story/i }),
     ).toBeInTheDocument();
   });
 });

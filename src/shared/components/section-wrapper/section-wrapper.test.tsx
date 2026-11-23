@@ -48,18 +48,18 @@ describe("SectionWrapper", () => {
       <SectionWrapper
         {...props}
         variant="section"
-        button={{ label: "View the stories" }}
+        button={{ label: "View the stories", href: "/stories" }}
       />,
     );
 
     expect(
-      screen.getByRole("button", { name: "View the stories" }),
+      screen.getByRole("link", { name: "View the stories" }),
     ).toBeInTheDocument();
   });
 
   it("does not render a CTA button when omitted", () => {
     render(<SectionWrapper {...props} variant="section" />);
 
-    expect(screen.queryByRole("button")).not.toBeInTheDocument();
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });
 });
