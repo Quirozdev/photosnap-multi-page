@@ -6,16 +6,24 @@ interface Props extends React.ComponentProps<"button"> {
   onToggle: () => void;
 }
 
-export default function MenuButton({ isOpen, onToggle, className }: Props) {
+export default function MenuButton({
+  isOpen,
+  onToggle,
+  className,
+  ...props
+}: Props) {
   return (
     <button
       type="button"
-      aria-label={isOpen ? "Open mobile menu" : "Close mobile menu"}
+      aria-expanded={isOpen}
+      aria-controls="mobile-navigation"
+      aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
       className={cn(
         "flex size-5 cursor-pointer items-center justify-center",
         className,
       )}
       onClick={onToggle}
+      {...props}
     >
       {isOpen ? (
         <Image

@@ -1,6 +1,6 @@
 import { cn } from "@/shared/utils/cn";
 
-interface Props {
+interface Props extends React.ComponentProps<"div"> {
   isActive: boolean;
   onToggle: () => void;
   inactiveLabel: string;
@@ -12,6 +12,7 @@ export default function Toggle({
   onToggle,
   inactiveLabel,
   activeLabel,
+  "aria-label": ariaLabel,
 }: Props) {
   return (
     <div className="flex items-center gap-x-8">
@@ -36,6 +37,7 @@ export default function Toggle({
           { "bg-neutral-950": isActive },
         )}
         onClick={onToggle}
+        aria-label={ariaLabel}
       >
         <span
           className={cn(

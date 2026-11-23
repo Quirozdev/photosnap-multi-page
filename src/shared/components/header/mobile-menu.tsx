@@ -17,6 +17,7 @@ export default function MobileMenu({
 }: Props) {
   return (
     <nav
+      id="mobile-navigation"
       inert={!isOpen}
       className={cn(
         "pointer-events-none flex flex-col",

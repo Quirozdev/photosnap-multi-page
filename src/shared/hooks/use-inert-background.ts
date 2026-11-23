@@ -9,6 +9,9 @@ export function useInertBackground({ shouldBeInert }: Props) {
     const main = document.getElementsByTagName("main")[0];
     const footer = document.getElementsByTagName("footer")[0];
 
+    const previousMainInert = main?.inert ?? false;
+    const previousFooterInert = footer?.inert ?? false;
+
     if (main) {
       main.inert = shouldBeInert;
     }
@@ -18,10 +21,10 @@ export function useInertBackground({ shouldBeInert }: Props) {
 
     return () => {
       if (main) {
-        main.inert = false;
+        main.inert = previousMainInert;
       }
       if (footer) {
-        footer.inert = false;
+        footer.inert = previousFooterInert;
       }
     };
   }, [shouldBeInert]);

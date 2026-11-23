@@ -8,12 +8,22 @@ export function useRemoveVerticalScrolling({ shouldRemove }: Props) {
   useEffect(() => {
     if (!shouldRemove) return;
 
-    document.documentElement.classList.add("overflow-y-hidden");
-    document.documentElement.classList.add("scrollbar-gutter-stable");
+    const root = document.documentElement;
+
+    const hadOverflowHidden = root.classList.contains("overflow-y-hidden");
+    const hadScrollbarGutterStable = root.classList.contains(
+      "scrollbar-gutter-stable",
+    );
+
+    root.classList.add("overflow-y-hidden", "scrollbar-gutter-stable");
 
     return () => {
-      document.documentElement.classList.remove("overflow-y-hidden");
-      document.documentElement.classList.remove("scrollbar-gutter-stable");
+      if (!hadOverflowHidden) {
+        root.classList.remove("overflow-y-hidden");
+      }
+      if (!hadScrollbarGutterStable) {
+        root.classList.remove("scrollbar-gutter-stable");
+      }
     };
   }, [shouldRemove]);
 }

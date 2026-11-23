@@ -16,6 +16,7 @@ export default function PricingPlansSection() {
           onToggle={() => setIsYearlySelected((curr) => !curr)}
           inactiveLabel="Monthly"
           activeLabel="Yearly"
+          aria-label="Yearly billing"
         />
         <div className="flex flex-col gap-y-6 xl:flex-row xl:items-center xl:gap-x-375">
           {pricingPlans.map((pricingPlan) => {
