@@ -47,7 +47,9 @@ test.describe("Pricing page", () => {
 
       await page.goto("/pricing");
 
-      await expect(page.getByRole("heading", { name: "Compare" })).toBeHidden();
+      await expect(page.getByRole("heading", { name: "Compare" })).toHaveClass(
+        /sr-only/,
+      );
 
       await expect(page.getByRole("table")).toBeHidden();
 

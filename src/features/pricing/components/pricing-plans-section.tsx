@@ -18,6 +18,7 @@ export default function PricingPlansSection() {
           activeLabel="Yearly"
           aria-label="Yearly billing"
         />
+        <h2 className="sr-only">Plans</h2>
         <div className="flex flex-col gap-y-6 xl:flex-row xl:items-center xl:gap-x-375">
           {pricingPlans.map((pricingPlan) => {
             return (

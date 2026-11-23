@@ -15,7 +15,7 @@ export default function CompareFeaturesTable() {
             scope="col"
             className="text-preset-7 p-6 pt-0 text-left text-neutral-950 uppercase"
           >
-            <h4>The features</h4>
+            The features
           </th>
           {pricingPlans.map((pricingPlan) => {
             return (
