@@ -11,20 +11,22 @@ import { defineConfig, devices } from "@playwright/test";
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-const isCi = Boolean(process.env.CI);
+const isCI = Boolean(process.env.CI);
 
 export default defineConfig({
   testDir: "./tests",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: isCi,
+  forbidOnly: isCI,
   /* Retry on CI only */
-  retries: isCi ? 2 : 0,
+  retries: isCI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: isCi ? 1 : undefined,
+  workers: isCI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
+  reporter: isCI
+    ? [["github"], ["html", { open: "never" }]]
+    : [["html", { open: "never" }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -73,9 +75,10 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !isCi,
-  // },
+  webServer: {
+    command: isCI ? "pnpm start" : "pnpm dev",
+    url: "http://127.0.0.1:3000",
+    reuseExistingServer: !isCI,
+    timeout: 120_000,
+  },
 });
